@@ -19,7 +19,7 @@ const displayUsers = function (userResults){
         const name = user.name.first;
         const imageUrl = user.picture.medium;
         const userDiv = document.createElement("div");
-        userDiv.innerHtml = `
+        userDiv.innerHTML = `
         <h3>${name}</h3>
         <p>${country}</p>
         <img src=${imageUrl} alt="User avatar" />
@@ -28,6 +28,6 @@ const displayUsers = function (userResults){
     }
 };
 selectUserNumber.addEventListener("change", function (e) {
-    const numUsers = e.taget.value;
+    const numUsers = e.target.value;
     getData(numUsers);
 });
